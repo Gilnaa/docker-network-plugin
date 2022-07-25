@@ -1,0 +1,16 @@
+{
+  "description": "bridge+uplink network plugin",
+  "documentation": "https://github.com/Gilnaa/docker-network-plugin-2",
+  "entrypoint": ["/bin/docker-network-plugin"],
+  "workdir": "/",
+  "network": {
+    "type": "host"
+  },
+  "interface": {
+    "types": ["docker.networkdriver/1.0"],
+    "socket": "network.sock"
+  },
+  "linux": {
+    "capabilities": ["CAP_NET_ADMIN"]
+  }
+}

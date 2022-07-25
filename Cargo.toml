@@ -1,0 +1,22 @@
+[package]
+name = "docker-network-plugin"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.56"
+axum = "0.5.14"
+futures = "0.3.21"
+hyper = "0.14.20"
+hyperlocal = "0.8.0"
+netlink-packet-route = "0.13.0"
+netlink-sys = { version = "0.8.3", features=["tokio", "tokio_socket"] }
+protobuf = "3.1.0"
+rtnetlink = "0.11.0"
+serde = { version = "1.0.139", features = ["derive"] }
+serde_json = "1.0.82"
+tokio = { version = "1.20.0", features=["full"] }
+tower-http = { version = "0.3.4", features = ["trace"] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
